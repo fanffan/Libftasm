@@ -25,7 +25,9 @@ LIB_SRC		=	ft_isdigit.s \
             ft_toupper.s \
             ft_islower.s \
             ft_isupper.s \
-            ft_isalpha.s 
+            ft_isalpha.s \
+            ft_isprint.s \
+            ft_isalnum.s 
 
 LIB_OBJ		= $(LIB_SRC:.s=.o)
 
