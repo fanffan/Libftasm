@@ -1,15 +1,14 @@
 section .text
 
-global ft_bzero
+global _ft_bzero
 
-start:
+_ft_bzero:
   enter 0, 0
-
-ft_bzero:
+loop:
   mov [rdi], BYTE 0x00
   inc rdi
   dec rsi
   cmp rsi, 0
-  ja ft_bzero
+  ja loop
+  leave
   ret
-

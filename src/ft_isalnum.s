@@ -1,14 +1,14 @@
-section .text:
-  global ft_isalnum
-  extern ft_isalpha
-  extern ft_isdigit
+section .text
+  global _ft_isalnum
+  extern _ft_isalpha
+  extern _ft_isdigit
 
-ft_isalnum:
+_ft_isalnum:
   enter 0, 0
-  call ft_isalpha
+  call _ft_isalpha
   cmp rax, 0
   jg exit
-  call ft_isdigit
+  call _ft_isdigit
 
 exit:
   leave

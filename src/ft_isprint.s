@@ -1,7 +1,7 @@
 section	.text
-  global ft_isprint
+global _ft_isprint
 
-ft_isprint:
+_ft_isprint:
   enter 0, 0
   cmp rdi, 32
   jb false

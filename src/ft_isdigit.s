@@ -1,7 +1,7 @@
 section	.text
-  global ft_isdigit
+global _ft_isdigit
 
-ft_isdigit:
+_ft_isdigit:
   enter 0, 0
   cmp rdi, 0
   jb false

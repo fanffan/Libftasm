@@ -1,14 +1,14 @@
 section .text
-	global ft_isalpha
-  extern ft_islower
-  extern ft_isupper
+	global _ft_isalpha
+  extern _ft_islower
+  extern _ft_isupper
 
-ft_isalpha:
+_ft_isalpha:
   enter 0, 0
-  call ft_islower
+  call _ft_islower
   cmp rax, 0
   jg exit
-  call ft_isupper
+  call _ft_isupper
 
 exit:
   leave

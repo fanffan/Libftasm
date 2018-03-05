@@ -1,7 +1,7 @@
 section	.text
-  global ft_islower
+global _ft_islower
 
-ft_islower:
+_ft_islower:
   enter 0, 0
   cmp rdi, 97
   jb false

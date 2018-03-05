@@ -1,7 +1,7 @@
 section	.text
-  global ft_isupper
+global _ft_isupper
 
-ft_isupper:
+_ft_isupper:
   enter 0, 0
   cmp rdi, 65
   jb false
