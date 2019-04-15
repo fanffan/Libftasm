@@ -3,9 +3,9 @@ global _ft_isdigit
 
 _ft_isdigit:
   enter 0, 0
-  cmp rdi, 0
+  cmp rdi, 48
   jb false
-  cmp rdi, 9
+  cmp rdi, 57
   jg false
   mov rax, 1
   jmp exit

@@ -3,17 +3,21 @@ global _ft_strdup
 extern _malloc
 extern _ft_strlen
 extern _ft_memcpy
+extern _ft_bzero
 
 _ft_strdup:
-  mov r8, rdi
+  enter 0, 0
+  mov r12, rdi ; string
   call _ft_strlen
-  mov r9, rax
-  mov rdi, rax
+  mov r13, rax ; size
+  inc r13
+  mov rdi, r13
   call _malloc
-  mov [rax + r9], byte 0x00
-  mov rdi, rax
-  mov rsi, r8
-  mov rdx, r9
+  mov r14, rax ; pointeur
+  mov rdi, r14
+  mov rsi, r12
+  mov rdx, r13
   call _ft_memcpy
+  mov rax, r14
   leave
   ret
