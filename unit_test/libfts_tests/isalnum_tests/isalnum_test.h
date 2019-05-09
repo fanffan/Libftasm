@@ -2,6 +2,8 @@
 # define ISALNUM_TEST_H
 
 # include "../libfts_tests.h"
+#include <ctype.h>
+
 
 void    isalnum_launcher(t_frame *frame);
 int     num_test(void);

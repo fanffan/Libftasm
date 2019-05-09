@@ -6,7 +6,7 @@
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 12:03:55 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/09 17:50:05 by fmaury           ###   ########.fr       */
+/*   Updated: 2019/05/09 18:24:57 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 int     num_test(void)
 {
-	return (ft_isalnum('1'));
+	char c;
+
+	c = '1';
+	if (ft_isalnum('1') == isalnum('1'))
+		return (1);
+	return (0);
 }
