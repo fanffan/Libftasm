@@ -13,7 +13,7 @@
 NAME			= libunit.a
 COMPILER		= clang
 
-CC_FLAGS		= -Wall -Werror -Wextra
+CC_FLAGS		= -Wall -Werror -Wextra -g
 
 LIBFT			= ../libft
 

@@ -6,7 +6,7 @@
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 23:26:25 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/09 11:18:17 by fmaury           ###   ########.fr       */
+/*   Updated: 2019/05/09 12:21:05 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include <stdlib.h>
 # include <sys/wait.h>
 # include <unistd.h>
-# include "../libft/srclib/libft.h"
+# include <stdio.h>
+# include <strings.h>
 
 typedef struct			s_frame
 {

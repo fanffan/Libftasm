@@ -6,7 +6,7 @@
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 23:33:24 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/09 11:18:11 by fmaury           ###   ########.fr       */
+/*   Updated: 2019/05/09 12:47:35 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int		ft_fork(void)
 	if (WIFSIGNALED(state))
 	{
 		if (WTERMSIG(state) == SIGBUS)
-			puts("\t:\t[\x1b[31mBUS]\x1b[0m");
+			puts("\t:\t[\x1b[31mBUS\x1b[0m]");
 		else if (WTERMSIG(state) == SIGSEGV)
-			puts("\t:\t[\x1b[31mSEGV]\x1b[0m");
+			puts("\t:\t[\x1b[31mSEGV\x1b[0m]");
 	}
 	if (WIFEXITED(state))
 	{
@@ -42,7 +42,6 @@ int		ft_fork(void)
 
 int		test_fnct(t_frame *lst)
 {
-	int		ret;
 	pid_t	pid;
 
 	pid = fork();
@@ -52,11 +51,11 @@ int		test_fnct(t_frame *lst)
 	{
 		if (lst->f())
 		{
-			puts("\t:\t[\x1b[32mOK]\x1b[0m");
+			puts("\t:\t[\x1b[32mOK\x1b[0m]");
 			return (1);
 		}
 		else
-			puts("\t:\t[\x1b[31mKO]\x1b[0m");
+			puts("\t:\t[\x1b[31mKO\x1b[0m]");
 		return (0);
 	}
 	else
@@ -68,6 +67,7 @@ void	launch_test(t_frame *lst, int *res)
 	int		resf;
 
 	resf = 0;
+	puts("aoui");
 	while (lst)
 	{
 		printf("%s", (lst->name));
