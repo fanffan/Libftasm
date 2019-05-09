@@ -6,7 +6,7 @@
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 23:26:25 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/09 12:21:05 by fmaury           ###   ########.fr       */
+/*   Updated: 2019/05/09 15:28:44 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,27 @@
 # include <stdio.h>
 # include <strings.h>
 
-typedef struct			s_frame
+typedef struct			s_lst
 {
 	char				*name;
 	int					(*f)(void);
-	int					check;
-	struct s_frame		*next;
+	struct s_lst		*next;
+}						t_lst;
+
+typedef struct			s_frame
+{
+	t_lst				*first;
+	t_lst				*lst;
+	int					total;
+	int					succ;
 }						t_frame;
 
 void					aff_res(int *res);
 t_frame					*init_lst(t_frame *lst, char *str, int (*f)(void));
-void					new_maillon(t_frame *lst, char *str, int (*f)(void));
-void					load_test(t_frame **lst, char *name, int (*f)(void));
-void					launch_test(t_frame *lst, int *res);
+t_frame					*new_maillon(t_frame *lst, char *str, int (*f)(void));
+void					load_tests(t_frame *frame, char *str, int (*f)(void));
+void					launch_tests(t_frame *frame);
 int						ft_valid_test(int flag);
 int						ft_test_nbr(int flag);
-void					launcher(int *check);
 
 #endif
