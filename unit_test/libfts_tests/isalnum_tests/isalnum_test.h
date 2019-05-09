@@ -1,10 +1,12 @@
 #ifndef ISALNUM_TEST_H
 # define ISALNUM_TEST_H
 
-void    isalnum_launcher(void);
+# include "../libfts_tests.h"
+
+void    isalnum_launcher(t_frame *frame);
 int     num_test(void);
 int     char_test(void);
-int     hash_test(void);
+int     hardnum_test(void);
 
 
 #endif

@@ -25,6 +25,7 @@ FRAME_OBJ_DIR	= ./.objs
 
 FRAME_SRC		= launch_tests.c\
 				  load_tests.c\
+				  print_output.c
 				  
 FRAME_OBJ		= $(FRAME_SRC:.c=.o)
 

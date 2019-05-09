@@ -6,7 +6,7 @@
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 23:26:25 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/09 15:28:44 by fmaury           ###   ########.fr       */
+/*   Updated: 2019/05/09 18:06:30 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,9 @@ typedef struct			s_frame
 	int					succ;
 }						t_frame;
 
-void					aff_res(int *res);
-t_frame					*init_lst(t_frame *lst, char *str, int (*f)(void));
-t_frame					*new_maillon(t_frame *lst, char *str, int (*f)(void));
 void					load_tests(t_frame *frame, char *str, int (*f)(void));
 void					launch_tests(t_frame *frame);
-int						ft_valid_test(int flag);
-int						ft_test_nbr(int flag);
+void					print_output(t_frame *frame);
+void					unload_tests(t_frame *frame);
 
 #endif

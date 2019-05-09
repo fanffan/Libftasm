@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   real_test.h                                        :+:      :+:    :+:   */
+/*   03_hardpha_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/09 11:23:40 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/09 11:24:32 by fmaury           ###   ########.fr       */
+/*   Created: 2019/05/09 12:03:04 by fmaury            #+#    #+#             */
+/*   Updated: 2019/05/09 17:48:57 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libfts_tests.h"
+#include <ctype.h>
 
-#ifndef LIBFTS_TESTS_H
-# define LIBFTS_TESTS_H
+int     hardpha_test(void)
+{
+	int i;
 
-# include <string.h>
-# include "../framework/libunit.h"
-# include "isalnum/isalnum_test.h"
-
-#endif
+	i = -1000;
+	while (i < 2000)
+	{
+		if (ft_isalpha(i) != isalpha(i))
+			return (0);
+		i++;
+	}
+    return (1);
+}

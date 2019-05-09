@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_isalnum_launcher.c                              :+:      :+:    :+:   */
+/*   02_upper_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/09 12:04:16 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/09 17:57:05 by fmaury           ###   ########.fr       */
+/*   Created: 2019/05/09 12:04:04 by fmaury            #+#    #+#             */
+/*   Updated: 2019/05/09 17:50:27 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libfts_tests.h"
 
-void     isalnum_launcher(t_frame *frame)
+int     upper_test(void)
 {
-	puts("FT_ISALNUM :");
-	load_tests(frame, " - Number", &num_test);
-	load_tests(frame, " - Char", &char_test);
-	load_tests(frame, " - Hard", &hardnum_test);
-	launch_tests(frame);
-	puts("");
+    return (ft_isalpha('C'));
 }
