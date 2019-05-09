@@ -23,9 +23,8 @@ FRAME_SRC_DIR	= .
 
 FRAME_OBJ_DIR	= ./.objs
 
-FRAME_SRC		= frame.c\
-				  load_test.c\
-				  lst.c
+FRAME_SRC		= launch_tests.c\
+				  load_tests.c\
 				  
 FRAME_OBJ		= $(FRAME_SRC:.c=.o)
 
