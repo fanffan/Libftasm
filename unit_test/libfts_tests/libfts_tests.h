@@ -6,7 +6,7 @@
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 11:23:40 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/10 11:18:18 by fmaury           ###   ########.fr       */
+/*   Updated: 2019/05/10 15:36:07 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include "./isprint_tests/isprint_test.h"
 # include "./tolower_tests/tolower_test.h"
 # include "./toupper_tests/toupper_test.h"
+# include "./strcat_tests/strcat_test.h"
 # include "../../libftasm.h"
 
 #endif

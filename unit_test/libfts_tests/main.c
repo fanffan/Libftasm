@@ -12,6 +12,7 @@ int main(void)
     isprint_launcher(&frame);
     tolower_launcher(&frame);
     toupper_launcher(&frame);
+    strcat_launcher(&frame);
 	print_output(&frame);
 	return (0);
 }

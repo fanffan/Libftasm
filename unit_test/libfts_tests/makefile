@@ -95,11 +95,22 @@ SRCS_ISPRINT	= $(addprefix $(SRC_DIR_ISPRINT)/, $(SRC_ISPRINT))
 
 ######################################################################################
 
+SRC_DIR_STRCAT	= ./strcat_tests
+
+SRC_STRCAT		= 00_strcat_launcher.c\
+				  01_easy_test.c\
+				  02_medium_test.c\
+				  03_hard_test.c
+
+SRCS_STRCAT	= $(addprefix $(SRC_DIR_STRCAT)/, $(SRC_STRCAT))
+
+######################################################################################
+
 all: $(NAME)
 
 $(NAME): $(INC_UNIT) $(INC_REAL) $(INC_LIBFTS)
 		$(MAKE) -C ../framework/
-		 $(COMPILER) $(CC_FLAGS) $(LIBASM) $(FRAMEWORK) $(MAIN) $(SRCS_ISALNUM) $(SRCS_ISALPHA) $(SRCS_ISASCII) $(SRCS_ISDIGIT) $(SRCS_ISPRINT) $(SRCS_TOLOWER) $(SRCS_TOUPPER) -o tests
+		 $(COMPILER) $(CC_FLAGS) $(LIBASM) $(FRAMEWORK) $(MAIN) $(SRCS_ISALNUM) $(SRCS_ISALPHA) $(SRCS_ISASCII) $(SRCS_ISDIGIT) $(SRCS_STRCAT) $(SRCS_ISPRINT) $(SRCS_TOLOWER) $(SRCS_TOUPPER) -o tests
 
 clean:
 		rm -rf $(OBJ_DIR)
