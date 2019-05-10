@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_lower_tolower_test.c                                    :+:      :+:    :+:   */
+/*   00_isdupper_launcher.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/09 12:03:55 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/09 18:10:52 by fmaury           ###   ########.fr       */
+/*   Created: 2019/05/09 12:04:16 by fmaury            #+#    #+#             */
+/*   Updated: 2019/05/09 18:33:22 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libfts_tests.h"
 
-int     lower_tolower_test(void)
+void     toupper_launcher(t_frame *frame)
 {
-	if (ft_tolower('1') == tolower('1'))
-		return (1);
-	return (0);
+
+	puts("ft_toupper :");
+	load_tests(frame, " - Uppercase", &easy_toupper_test);
+	load_tests(frame, " - Number", &easy_toupper_test);
+	load_tests(frame, " - Hard", &hard_toupper_test);
+	launch_tests(frame);
+	puts("");
 }

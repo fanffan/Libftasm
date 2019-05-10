@@ -73,11 +73,33 @@ SRCS_TOLOWER	= $(addprefix $(SRC_DIR_TOLOWER)/, $(SRC_TOLOWER))
 
 ######################################################################################
 
+SRC_DIR_TOUPPER	= ./toupper_tests
+
+SRC_TOUPPER		= 00_toupper_launcher.c\
+				  01_easy_test.c\
+				  02_medium_test.c\
+				  03_hard_test.c
+
+SRCS_TOUPPER	= $(addprefix $(SRC_DIR_TOUPPER)/, $(SRC_TOUPPER))
+
+######################################################################################
+
+SRC_DIR_ISPRINT	= ./isprint_tests
+
+SRC_ISPRINT		= 00_isprint_launcher.c\
+				  01_easy_test.c\
+				  02_medium_test.c\
+				  03_hard_test.c
+
+SRCS_ISPRINT	= $(addprefix $(SRC_DIR_ISPRINT)/, $(SRC_ISPRINT))
+
+######################################################################################
+
 all: $(NAME)
 
 $(NAME): $(INC_UNIT) $(INC_REAL) $(INC_LIBFTS)
 		$(MAKE) -C ../framework/
-		 $(COMPILER) $(CC_FLAGS) $(LIBASM) $(FRAMEWORK) $(MAIN) $(SRCS_ISALNUM) $(SRCS_ISALPHA) $(SRCS_ISASCII) $(SRCS_ISDIGIT) $(SRCS_TOLOWER) -o tests
+		 $(COMPILER) $(CC_FLAGS) $(LIBASM) $(FRAMEWORK) $(MAIN) $(SRCS_ISALNUM) $(SRCS_ISALPHA) $(SRCS_ISASCII) $(SRCS_ISDIGIT) $(SRCS_ISPRINT) $(SRCS_TOLOWER) $(SRCS_TOUPPER) -o tests
 
 clean:
 		rm -rf $(OBJ_DIR)

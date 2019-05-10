@@ -9,7 +9,9 @@ int main(void)
     isalpha_launcher(&frame);
     isascii_launcher(&frame);
     isdigit_launcher(&frame);
+    isprint_launcher(&frame);
     tolower_launcher(&frame);
+    toupper_launcher(&frame);
 	print_output(&frame);
 	return (0);
 }

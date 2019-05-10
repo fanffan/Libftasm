@@ -21,7 +21,10 @@ int     hardlower_test(void)
 	while (i < 2000)
 	{
 		if (ft_tolower(i) != tolower(i))
+		{
+			printf("%d\n", i);
 			return (0);
+		}
 		i++;
 	}
     return (1);

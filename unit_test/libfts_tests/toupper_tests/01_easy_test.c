@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_lower_tolower_test.c                                    :+:      :+:    :+:   */
+/*   01_easy_toupper_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,9 +12,9 @@
 
 #include "../libfts_tests.h"
 
-int     lower_tolower_test(void)
+int     easy_toupper_test(void)
 {
-	if (ft_tolower('1') == tolower('1'))
+	if (ft_toupper('a') == toupper('a'))
 		return (1);
 	return (0);
 }

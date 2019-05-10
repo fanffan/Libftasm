@@ -16,7 +16,7 @@ void     tolower_launcher(t_frame *frame)
 {
 
 	puts("FT_tolower :");
-	load_tests(frame, " - lowercase", &lower_tolower_test);
+	load_tests(frame, " - number", &lower_tolower_test);
 	load_tests(frame, " - uppercase", &upper_tolower_test);
 	load_tests(frame, " - Hard", &hardlower_test);
 	launch_tests(frame);

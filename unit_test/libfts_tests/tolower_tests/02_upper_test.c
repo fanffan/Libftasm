@@ -13,6 +13,8 @@
 #include "../libfts_tests.h"
 
 int     upper_tolower_test(void)
-{
-    return (ft_tolower('9'));
+{	
+	if (ft_tolower('Z') == tolower('Z'))
+		return (1);
+    return (0);
 }
