@@ -20,6 +20,9 @@ int main(void)
 	puts("#           PART2           #");
 	puts("#############################\n");
     strlen_launcher(&frame);
+    memset_launcher(&frame);
+    memcpy_launcher(&frame);
+    strdup_launcher(&frame);
 	print_output(&frame);
 	return (0);
 }

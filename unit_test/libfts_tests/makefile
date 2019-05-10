@@ -117,13 +117,45 @@ SRCS_STRLEN	= $(addprefix $(SRC_DIR_STRLEN)/, $(SRC_STRLEN))
 
 ######################################################################################
 
+SRC_DIR_MEMSET	= ./memset_tests
+
+SRC_MEMSET		= 00_memset_launcher.c\
+				  01_easy_test.c\
+				  02_medium_test.c\
+				  03_hard_test.c
+
+SRCS_MEMSET	= $(addprefix $(SRC_DIR_MEMSET)/, $(SRC_MEMSET))
+
+######################################################################################
+
+SRC_DIR_STRDUP	= ./strdup_tests
+
+SRC_STRDUP		= 00_strdup_launcher.c\
+				  01_easy_test.c\
+				  02_medium_test.c\
+				  03_hard_test.c
+
+SRCS_STRDUP	= $(addprefix $(SRC_DIR_STRDUP)/, $(SRC_STRDUP))
+
+######################################################################################
+
+SRC_DIR_MEMCPY	= ./memcpy_tests
+
+SRC_MEMCPY		= 00_memcpy_launcher.c\
+				  01_easy_test.c\
+				  02_medium_test.c\
+				  03_hard_test.c
+
+SRCS_MEMCPY	= $(addprefix $(SRC_DIR_MEMCPY)/, $(SRC_MEMCPY))
+
+######################################################################################
 
 all: $(NAME)
 
 $(NAME): $(ALL_SRCS) $(INC_UNIT) $(INC_REAL) $(INC_LIBFTS)
 		$(MAKE) -C ../..
 		$(MAKE) -C ../framework/
-		$(COMPILER) $(CC_FLAGS) $(LIBASM) $(FRAMEWORK) $(MAIN) $(SRCS_ISALNUM) $(SRCS_ISALPHA) $(SRCS_ISASCII) $(SRCS_ISDIGIT) $(SRCS_STRCAT) $(SRCS_ISPRINT) $(SRCS_TOLOWER) $(SRCS_TOUPPER)  $(SRCS_STRLEN) -o tests
+		$(COMPILER) $(CC_FLAGS) $(LIBASM) $(FRAMEWORK) $(MAIN) $(SRCS_MEMCPY) $(SRCS_STRDUP) $(SRCS_MEMSET) $(SRCS_ISALNUM) $(SRCS_ISALPHA) $(SRCS_ISASCII) $(SRCS_ISDIGIT) $(SRCS_STRCAT) $(SRCS_ISPRINT) $(SRCS_TOLOWER) $(SRCS_TOUPPER)  $(SRCS_STRLEN) -o tests
 
 clean:
 		rm -rf $(OBJ_DIR)

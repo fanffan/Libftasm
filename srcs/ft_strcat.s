@@ -1,7 +1,5 @@
-m : db "lol",0
 section .text
 
-extern _puts
 global _ft_strcat
 
 _ft_strcat:

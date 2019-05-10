@@ -6,7 +6,7 @@
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 11:23:40 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/10 16:35:40 by fmaury           ###   ########.fr       */
+/*   Updated: 2019/05/10 18:18:45 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@
 # include "./toupper_tests/toupper_test.h"
 # include "./strcat_tests/strcat_test.h"
 # include "./strlen_tests/strlen_test.h"
+# include "./memset_tests/memset_test.h"
+# include "./memcpy_tests/memcpy_test.h"
+# include "./strdup_tests/strdup_test.h"
 # include "../../libftasm.h"
 
 #endif
