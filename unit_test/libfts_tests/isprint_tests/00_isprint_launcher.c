@@ -17,7 +17,7 @@ void     isprint_launcher(t_frame *frame)
 
 	puts("ft_isprint :");
 	load_tests(frame, " - Uppercase", &easy_isprint_test);
-	load_tests(frame, " - Number", &easy_isprint_test);
+	load_tests(frame, " - Number", &medium_isprint_test);
 	load_tests(frame, " - Hard", &hard_isprint_test);
 	launch_tests(frame);
 	puts("");

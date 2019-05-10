@@ -17,7 +17,7 @@ void     toupper_launcher(t_frame *frame)
 
 	puts("ft_toupper :");
 	load_tests(frame, " - Uppercase", &easy_toupper_test);
-	load_tests(frame, " - Number", &easy_toupper_test);
+	load_tests(frame, " - Number", &medium_toupper_test);
 	load_tests(frame, " - Hard", &hard_toupper_test);
 	launch_tests(frame);
 	puts("");

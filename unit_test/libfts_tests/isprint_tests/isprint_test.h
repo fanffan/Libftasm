@@ -6,7 +6,7 @@
 
 void    isprint_launcher(t_frame *frame);
 int     easy_isprint_test(void);
-int     easy_isprint_test(void);
+int     medium_isprint_test(void);
 int     hard_isprint_test(void);
 
 

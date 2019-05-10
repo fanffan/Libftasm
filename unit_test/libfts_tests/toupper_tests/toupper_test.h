@@ -6,7 +6,7 @@
 
 void    toupper_launcher(t_frame *frame);
 int     easy_toupper_test(void);
-int     easy_toupper_test(void);
+int     medium_toupper_test(void);
 int     hard_toupper_test(void);
 
 
