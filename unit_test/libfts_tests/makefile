@@ -106,11 +106,24 @@ SRCS_STRCAT	= $(addprefix $(SRC_DIR_STRCAT)/, $(SRC_STRCAT))
 
 ######################################################################################
 
+SRC_DIR_STRLEN	= ./strlen_tests
+
+SRC_STRLEN		= 00_strlen_launcher.c\
+				  01_easy_test.c\
+				  02_medium_test.c\
+				  03_hard_test.c
+
+SRCS_STRLEN	= $(addprefix $(SRC_DIR_STRLEN)/, $(SRC_STRLEN))
+
+######################################################################################
+
+
 all: $(NAME)
 
-$(NAME): $(INC_UNIT) $(INC_REAL) $(INC_LIBFTS)
+$(NAME): $(ALL_SRCS) $(INC_UNIT) $(INC_REAL) $(INC_LIBFTS)
+		$(MAKE) -C ../..
 		$(MAKE) -C ../framework/
-		 $(COMPILER) $(CC_FLAGS) $(LIBASM) $(FRAMEWORK) $(MAIN) $(SRCS_ISALNUM) $(SRCS_ISALPHA) $(SRCS_ISASCII) $(SRCS_ISDIGIT) $(SRCS_STRCAT) $(SRCS_ISPRINT) $(SRCS_TOLOWER) $(SRCS_TOUPPER) -o tests
+		$(COMPILER) $(CC_FLAGS) $(LIBASM) $(FRAMEWORK) $(MAIN) $(SRCS_ISALNUM) $(SRCS_ISALPHA) $(SRCS_ISASCII) $(SRCS_ISDIGIT) $(SRCS_STRCAT) $(SRCS_ISPRINT) $(SRCS_TOLOWER) $(SRCS_TOUPPER)  $(SRCS_STRLEN) -o tests
 
 clean:
 		rm -rf $(OBJ_DIR)
