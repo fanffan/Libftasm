@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_isdupper_launcher.c                              :+:      :+:    :+:   */
+/*   03_hard_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/09 12:04:16 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/09 18:33:22 by fmaury           ###   ########.fr       */
+/*   Created: 2019/05/09 12:03:04 by fmaury            #+#    #+#             */
+/*   Updated: 2019/05/13 15:05:29 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libfts_tests.h"
+#include <ctype.h>
+#include <fcntl.h>
 
-void     cat_launcher(t_frame *frame)
+int     hard_bzero_test(void)
 {
+	char *s;
+	int i;
 
-	puts("ft_cat :");
-	load_tests(frame, " - File", &easy_cat_test);
-	load_tests(frame, " - Directory", &medium_cat_test);
-	load_tests(frame, " - Wrong fd", &hard_cat_test);
-	launch_tests(frame);
-	puts("");
+	i = 0;
+	s = strdup("haiopoiuyt");
+	ft_bzero(s, 5);
+	for (; i < 10; i++)
+	{
+		if (s[i] != 0)
+			break;
+	}
+	if (i == 5)
+		return (1);
+	return (0);
 }

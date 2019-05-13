@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_isdupper_launcher.c                              :+:      :+:    :+:   */
+/*   02_easy_islower_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/09 12:04:16 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/09 18:33:22 by fmaury           ###   ########.fr       */
+/*   Created: 2019/05/09 12:04:04 by fmaury            #+#    #+#             */
+/*   Updated: 2019/05/09 18:10:52 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libfts_tests.h"
+#include <fcntl.h>
 
-void     cat_launcher(t_frame *frame)
-{
-
-	puts("ft_cat :");
-	load_tests(frame, " - File", &easy_cat_test);
-	load_tests(frame, " - Directory", &medium_cat_test);
-	load_tests(frame, " - Wrong fd", &hard_cat_test);
-	launch_tests(frame);
-	puts("");
+int     medium_islower_test(void)
+{	
+	if (ft_islower('A') == islower('A'))
+		return (1);
+    return (0);
 }

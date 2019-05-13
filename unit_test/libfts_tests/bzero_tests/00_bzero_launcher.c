@@ -12,13 +12,13 @@
 
 #include "../libfts_tests.h"
 
-void     cat_launcher(t_frame *frame)
+void     bzero_launcher(t_frame *frame)
 {
 
-	puts("ft_cat :");
-	load_tests(frame, " - File", &easy_cat_test);
-	load_tests(frame, " - Directory", &medium_cat_test);
-	load_tests(frame, " - Wrong fd", &hard_cat_test);
+	puts("ft_bzero :");
+	load_tests(frame, " - Unintialized", &easy_bzero_test);
+	load_tests(frame, " - Initialized", &medium_bzero_test);
+	load_tests(frame, " - Half str", &hard_bzero_test);
 	launch_tests(frame);
 	puts("");
 }

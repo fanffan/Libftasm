@@ -12,13 +12,13 @@
 
 #include "../libfts_tests.h"
 
-void     cat_launcher(t_frame *frame)
+void     islower_launcher(t_frame *frame)
 {
 
-	puts("ft_cat :");
-	load_tests(frame, " - File", &easy_cat_test);
-	load_tests(frame, " - Directory", &medium_cat_test);
-	load_tests(frame, " - Wrong fd", &hard_cat_test);
+	puts("ft_islower :");
+	load_tests(frame, " - Lowercase", &easy_islower_test);
+	load_tests(frame, " - Uppercase", &medium_islower_test);
+	load_tests(frame, " - All", &hard_islower_test);
 	launch_tests(frame);
 	puts("");
 }
