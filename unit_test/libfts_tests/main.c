@@ -32,7 +32,7 @@ int main(void)
 	puts("#           BONUS           #");
 	puts("#############################\n");
 	islower_launcher(&frame);
-	
+	isupper_launcher(&frame);
 
 	print_output(&frame);
 	return (0);
