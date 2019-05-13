@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   02_null_test.c                                     :+:      :+:    :+:   */
+/*   01_easy_cat_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 11:06:23 by fmaury            #+#    #+#             */
-/*   Updated: 2017/02/11 22:18:03 by fmaury           ###   ########.fr       */
+/*   Created: 2019/05/09 12:03:55 by fmaury            #+#    #+#             */
+/*   Updated: 2019/05/09 18:10:52 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "../libfts_tests.h"
+#include <fcntl.h>
 
-int pt2_strlen(char *str)
+int     easy_cat_test(void)
 {
-	int i;
-	
-	i = 0;
-	while(str[i])
-		i++;
-	return (i - 1);
-}
+	int fd;
 
-int test_ko(void)
-{
-	if (strlen("salut") == pt2_strlen("salut"))
-		return (0);
-	else
-		return(-1);
+	fd = open("./file.txt", O_RDONLY);
+	ft_cat(fd);
+	return (1);
 }

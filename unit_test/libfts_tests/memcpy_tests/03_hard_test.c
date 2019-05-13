@@ -24,12 +24,14 @@ int     hard_memcpy_test(void)
 	bzero(s1, 100);
 	bzero(s2, 100);
 	s1 = (char *)ft_memcpy(s1, s, 5);
-	s2 = (char *)memcpy(s1, s, 5);
+	s2 = (char *)memcpy(s2, s, 5);
 	if (!strcmp(s1,s2))
 	{
 		free(s1);
 		free(s2);
 		return (1);
 	}
+	free(s1);
+	free(s2);
 	return (0);
 }

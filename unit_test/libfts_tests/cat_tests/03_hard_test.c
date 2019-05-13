@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_easy_test.c                                     :+:      :+:    :+:   */
+/*   03_hard_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 11:06:23 by fmaury            #+#    #+#             */
-/*   Updated: 2017/02/11 22:31:18 by fmaury           ###   ########.fr       */
+/*   Created: 2019/05/09 12:03:04 by fmaury            #+#    #+#             */
+/*   Updated: 2019/05/13 14:46:18 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include "../libfts_tests.h"
+#include <ctype.h>
+#include <fcntl.h>
 
-int pt_strlen(char *str)
+int     hard_cat_test(void)
 {
-	int i;
-	
-	i = 0;
-	while(str[i])
-		i++;
-	return (i);
-}
+	int fd;
 
-int test_ok(void)
-{
-	if (strlen("salut") == pt_strlen("salut"))
-		return (0);
-	else
-		return(-1);
+	fd = open("dsjfhjksdfhkdj", O_RDONLY);
+	ft_cat(fd);
+	return (1);
 }

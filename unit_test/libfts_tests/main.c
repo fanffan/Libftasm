@@ -23,6 +23,10 @@ int main(void)
     memset_launcher(&frame);
     memcpy_launcher(&frame);
     strdup_launcher(&frame);
+	cat_launcher(&frame);
 	print_output(&frame);
+	puts("\n#############################");
+	puts("#           BONUS           #");
+	puts("#############################\n");
 	return (0);
 }
