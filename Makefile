@@ -6,7 +6,7 @@
 #    By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 11:00:31 by fmaury            #+#    #+#              #
-#    Updated: 2019/05/10 13:05:06 by fmaury           ###   ########.fr        #
+#    Updated: 2019/05/13 15:50:26 by fmaury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,11 +35,15 @@ LIB_SRC		=	ft_isdigit.s \
 				ft_isascii.s \
 				ft_bzero.s \
 				ft_puts.s \
+				ft_putchar.s \
 				ft_strlen.s \
 				ft_memset.s \
 				ft_memcpy.s \
+				ft_memalloc.s \
+				ft_strnew.s \
 				ft_strdup.s \
-				ft_strcat.s
+				ft_strcat.s \
+				ft_cat.s
 
 LIB_OBJ		= $(LIB_SRC:.s=.o)
 

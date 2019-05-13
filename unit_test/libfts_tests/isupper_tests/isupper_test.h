@@ -9,5 +9,4 @@ int     easy_isupper_test(void);
 int     medium_isupper_test(void);
 int     hard_isupper_test(void);
 
-
 #endif

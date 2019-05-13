@@ -18,6 +18,7 @@ int main(void)
     tolower_launcher(&frame);
     toupper_launcher(&frame);
     strcat_launcher(&frame);
+    puts_launcher(&frame);
 
 	puts("\n#############################");
 	puts("#           PART2           #");
@@ -33,6 +34,9 @@ int main(void)
 	puts("#############################\n");
 	islower_launcher(&frame);
 	isupper_launcher(&frame);
+	memalloc_launcher(&frame);
+	strnew_launcher(&frame);
+	putchar_launcher(&frame);
 
 	print_output(&frame);
 	return (0);
