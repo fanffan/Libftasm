@@ -4,6 +4,7 @@ global _ft_strcat
 
 _ft_strcat:
 	enter 0, 0
+	push r12
 	mov r12, rdi
 
 s1chk:
@@ -20,7 +21,7 @@ s2chk:
 	je end
 
 s2:
-	mov qword [rdi], 0
+	mov byte [rdi], 0
 	mov al, byte [rsi]
 	mov byte [rdi], al
 	inc rsi
@@ -28,7 +29,8 @@ s2:
 	cmp byte [rsi], 0
 	jne s2
 end:
-	mov qword [rdi], 0
+	mov byte [rdi], 0
 	mov rax, r12
+	pop r12
 	leave
 	ret

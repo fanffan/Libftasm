@@ -3,6 +3,7 @@ section .text
 
 _ft_memcpy:
 	enter 0,0
+	push r12
 	mov r12, rdi
 	cmp rdx, 0
 	jbe exit
@@ -11,5 +12,6 @@ _ft_memcpy:
 	repne movsb
 exit:
 	mov rax, r12
+	pop r12
 	leave
 	ret
