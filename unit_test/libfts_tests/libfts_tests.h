@@ -6,7 +6,7 @@
 /*   By: fmaury <fmaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/09 11:23:40 by fmaury            #+#    #+#             */
-/*   Updated: 2019/05/13 17:44:59 by fmaury           ###   ########.fr       */
+/*   Updated: 2019/05/21 12:58:33 by fmaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@
 # include "./memalloc_tests/memalloc_test.h"
 # include "./strdup_tests/strdup_test.h"
 # include "./strnew_tests/strnew_test.h"
+# include "./strcpy_tests/strcpy_test.h"
 # include "./cat_tests/cat_test.h"
 # include "./puts_tests/puts_test.h"
 # include "./bzero_tests/bzero_test.h"

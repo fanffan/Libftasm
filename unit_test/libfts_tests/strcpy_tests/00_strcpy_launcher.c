@@ -12,13 +12,13 @@
 
 #include "../libfts_tests.h"
 
-void     putchar_launcher(t_frame *frame)
+void     strcpy_launcher(t_frame *frame)
 {
 
-	puts("ft_putchar :");
-	load_tests(frame, " - 1 char", &easy_putchar_test);
-	load_tests(frame, " - newline", &medium_putchar_test);
-	load_tests(frame, " - NULL", &hard_putchar_test);
+	puts("ft_strcpy :");
+	load_tests(frame, " - 1 char", &easy_strcpy_test);
+	load_tests(frame, " - String", &medium_strcpy_test);
+	load_tests(frame, " - Big String", &hard_strcpy_test);
 	launch_tests(frame);
 	puts("");
 }

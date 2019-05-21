@@ -23,5 +23,7 @@ char    *ft_strdup(char *str);
 char    *ft_cat(int fd);
 void	*ft_memalloc(size_t size);
 void	*ft_strnew(size_t size);
+char	*ft_strcpy(char *s1, const char *s2);
+char	*ft_cjoin(char *s1, char c);
 
 # endif

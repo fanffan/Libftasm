@@ -36,6 +36,7 @@ int main(void)
 	isupper_launcher(&frame);
 	memalloc_launcher(&frame);
 	strnew_launcher(&frame);
+	strcpy_launcher(&frame);
 	putchar_launcher(&frame);
 
 	print_output(&frame);

@@ -6,7 +6,7 @@ extern _ft_memcpy
 extern _ft_bzero
 
 _ft_strdup:
-  enter 0, 0
+  enter 8, 0
   push r12
   push r13
   push r14
@@ -22,8 +22,8 @@ _ft_strdup:
   mov rdx, r13
   call _ft_memcpy
   mov rax, r14
-  pop r12
-  pop r13
   pop r14
+  pop r13
+  pop r12
   leave
   ret

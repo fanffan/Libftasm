@@ -2,7 +2,7 @@ NAME			= unit_test
 
 COMPILER		= clang
 
-CC_FLAGS		= -Wextra -Wall -Werror -g 
+CC_FLAGS		= -Wextra -Wall -Werror
 
 FRAMEWORK		= ../framework/libunit.a
 
@@ -238,12 +238,23 @@ SRCS_PUTCHAR	= $(addprefix $(SRC_DIR_PUTCHAR)/, $(SRC_PUTCHAR))
 
 ######################################################################################
 
+SRC_DIR_STRCPY	= ./strcpy_tests
+
+SRC_STRCPY		= 00_strcpy_launcher.c\
+				  01_easy_test.c\
+				  02_medium_test.c\
+				  03_hard_test.c
+
+SRCS_STRCPY	= $(addprefix $(SRC_DIR_STRCPY)/, $(SRC_STRCPY))
+
+######################################################################################
+
 all: $(NAME)
 
-$(NAME): $(ALL_SRCS) $(INC_UNIT) $(INC_REAL) $(INC_LIBFTS)
+$(NAME): $(INC_UNIT) $(INC_REAL) $(INC_LIBFTS)
 		$(MAKE) -C ../..
 		$(MAKE) -C ../framework/
-		$(COMPILER) $(CC_FLAGS) $(LIBASM) $(FRAMEWORK) $(SRCS_STRNEW) $(SRCS_PUTS) $(SRCS_PUTCHAR) $(SRCS_MEMALLOC) $(MAIN) $(SRCS_ISUPPER) $(SRCS_ISLOWER) $(SRCS_BZERO) $(SRCS_CAT) $(SRCS_MEMCPY) $(SRCS_STRDUP) $(SRCS_MEMSET) $(SRCS_ISALNUM) $(SRCS_ISALPHA) $(SRCS_ISASCII) $(SRCS_ISDIGIT) $(SRCS_STRCAT) $(SRCS_ISPRINT) $(SRCS_TOLOWER) $(SRCS_TOUPPER)  $(SRCS_STRLEN) -o tests
+		$(COMPILER) $(CC_FLAGS) $(LIBASM) $(FRAMEWORK) $(SRCS_STRCPY) $(SRCS_STRNEW) $(SRCS_PUTS) $(SRCS_PUTCHAR) $(SRCS_MEMALLOC) $(MAIN) $(SRCS_ISUPPER) $(SRCS_ISLOWER) $(SRCS_BZERO) $(SRCS_CAT) $(SRCS_MEMCPY) $(SRCS_STRDUP) $(SRCS_MEMSET) $(SRCS_ISALNUM) $(SRCS_ISALPHA) $(SRCS_ISASCII) $(SRCS_ISDIGIT) $(SRCS_STRCAT) $(SRCS_ISPRINT) $(SRCS_TOLOWER) $(SRCS_TOUPPER)  $(SRCS_STRLEN) -o tests
 
 clean:
 		rm -rf $(OBJ_DIR)

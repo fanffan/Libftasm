@@ -21,7 +21,6 @@ s2chk:
 	je end
 
 s2:
-	mov byte [rdi], 0
 	mov al, byte [rsi]
 	mov byte [rdi], al
 	inc rsi
